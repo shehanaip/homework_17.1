@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Even or Odd Calculator</h2>
+
+    <label for="number">Enter a number:</label><br>
+    <input type="number" id="number" name="number"><br><br>
+    <button onclick="calculateEvenOdd()">Calculate</button>
+
+    <p id="result"></p>
+
+    <script>
+        function calculateEvenOdd() {
+            var number = document.getElementById("number").value;
+            var result;
+
+            if (number % 2 == 0) {
+                result = "Even";
+            } else {
+                result = "Odd";
+            }
+
+            document.getElementById("result").innerHTML = "The number is: " + result;
+        }
+    </script>
+</body>
+</html>
